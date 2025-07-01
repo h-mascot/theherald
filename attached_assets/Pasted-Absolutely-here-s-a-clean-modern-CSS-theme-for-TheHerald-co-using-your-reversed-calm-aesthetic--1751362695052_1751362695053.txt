@@ -1,0 +1,106 @@
+Absolutely — here’s a clean, modern CSS theme for TheHerald.co using your reversed calm aesthetic.
+
+You can apply this to a simple HTML landing page layout. It uses soft tones, divine serif typography, and a calming UI structure.
+
+⸻
+
+🌿 TheHerald.co Calm CSS Theme
+
+/* === Global Settings === */
+:root {
+  --bg: #F5F6F8;
+  --text: #1F1F1F;
+  --subtext: #6F7A8B;
+  --primary-accent: #A3BFFA;
+  --secondary-accent: #DDE6F3;
+  --cta: #4C63B6;
+  --cta-hover: #3B51A2;
+  --border: #E2E8F0;
+
+  --font-headline: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-headline);
+  color: var(--text);
+  margin-top: 0;
+}
+
+p {
+  color: var(--subtext);
+  max-width: 700px;
+  margin: 0 auto 1.5em;
+}
+
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+button {
+  background-color: var(--cta);
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: var(--font-body);
+}
+
+button:hover {
+  background-color: var(--cta-hover);
+}
+
+blockquote {
+  font-family: var(--font-headline);
+  font-size: 20px;
+  font-style: italic;
+  color: var(--text);
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--secondary-accent);
+  border-left: 4px solid var(--primary-accent);
+}
+
+footer {
+  background-color: var(--bg);
+  color: var(--subtext);
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 14px;
+  border-top: 1px solid var(--border);
+}
+
+/* Optional utility styles */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+⸻
+
+🔗 Font Imports (for your HTML <head>)
+
+Add this to your HTML head to enable the fonts used:
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+
+⸻
+
+Let me know if you want a HTML base file to go with this CSS — or if you’d like a version with dark mode toggle, animation, or Notion-style feel.

@@ -83,7 +83,7 @@ export default function Landing() {
   ];
 
   return (
-    <div className="cosmic-bg min-h-screen text-starlight">
+    <div className="calm-bg min-h-screen text-primary">
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 glass-effect">
         <div className="max-w-7xl mx-auto px-6 py-4">
@@ -92,9 +92,9 @@ export default function Landing() {
               The Herald
             </div>
             <div className="hidden md:flex space-x-8">
-              <a href="#vision" className="text-silver-mist hover:text-starlight transition-colors duration-300">Vision</a>
-              <a href="#focus" className="text-silver-mist hover:text-starlight transition-colors duration-300">Focus</a>
-              <a href="#manifesto" className="text-silver-mist hover:text-starlight transition-colors duration-300">Manifesto</a>
+              <a href="#vision" className="text-subtext hover:text-primary transition-colors duration-300">Vision</a>
+              <a href="#focus" className="text-subtext hover:text-primary transition-colors duration-300">Focus</a>
+              <a href="#manifesto" className="text-subtext hover:text-primary transition-colors duration-300">Manifesto</a>
             </div>
           </div>
         </div>
@@ -112,7 +112,7 @@ export default function Landing() {
             Ye are gods.
           </motion.h1>
           <motion.p 
-            className="text-xl md:text-2xl font-light mb-8 text-silver-mist leading-relaxed max-w-3xl mx-auto"
+            className="text-xl md:text-2xl font-light mb-8 text-subtext leading-relaxed max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
@@ -120,7 +120,7 @@ export default function Landing() {
             We're catalyzing a world of abundance and unconstrained human achievement.
           </motion.p>
           <motion.p 
-            className="text-lg md:text-xl font-light mb-12 text-silver-mist leading-relaxed max-w-4xl mx-auto"
+            className="text-lg md:text-xl font-light mb-12 text-subtext leading-relaxed max-w-4xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
@@ -136,7 +136,7 @@ export default function Landing() {
             <Button 
               variant="outline"
               onClick={() => scrollToSection('vision')}
-              className="border border-starlight text-starlight px-8 py-4 rounded-lg font-semibold hover:bg-starlight hover:text-cosmic-black transition-all duration-300"
+              className="btn-outline px-8 py-4 rounded-lg font-semibold"
             >
               Learn More
             </Button>
@@ -144,9 +144,9 @@ export default function Landing() {
         </div>
         
         {/* Floating geometric elements */}
-        <div className="absolute top-1/4 left-10 w-4 h-4 border border-starlight opacity-30 animate-float" style={{animationDelay: '1s'}}></div>
-        <div className="absolute top-3/4 right-20 w-6 h-6 border border-ethereal-blue opacity-40 animate-float" style={{animationDelay: '2s'}}></div>
-        <div className="absolute bottom-1/4 left-1/3 w-2 h-2 bg-divine-gold opacity-50 animate-float" style={{animationDelay: '3s'}}></div>
+        <div className="absolute top-1/4 left-10 w-4 h-4 border border-accent opacity-30 animate-float" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-3/4 right-20 w-6 h-6 border border-accent opacity-40 animate-float" style={{animationDelay: '2s'}}></div>
+        <div className="absolute bottom-1/4 left-1/3 w-2 h-2 bg-cta opacity-50 animate-float" style={{animationDelay: '3s'}}></div>
       </section>
 
       {/* Vision Section */}
@@ -157,7 +157,7 @@ export default function Landing() {
               <h2 className="font-serif text-4xl md:text-5xl font-bold mb-8 text-gradient">
                 Shaping Tomorrow
               </h2>
-              <div className="space-y-6 text-lg leading-relaxed text-silver-mist">
+              <div className="space-y-6 text-lg leading-relaxed text-subtext">
                 <p>
                   The Herald is a future-facing holding company shaping the world to come. 
                   We incubate and invest in bold ideas across AI, synthetic biology, space, 

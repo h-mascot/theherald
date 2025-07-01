@@ -1,39 +1,45 @@
 /* Font imports */
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@600&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: hsl(0, 0%, 100%);
-  --foreground: hsl(20, 14.3%, 4.1%);
-  --muted: hsl(60, 4.8%, 95.9%);
-  --muted-foreground: hsl(25, 5.3%, 44.7%);
-  --popover: hsl(0, 0%, 100%);
-  --popover-foreground: hsl(20, 14.3%, 4.1%);
-  --card: hsl(0, 0%, 100%);
-  --card-foreground: hsl(20, 14.3%, 4.1%);
-  --border: hsl(20, 5.9%, 90%);
-  --input: hsl(20, 5.9%, 90%);
-  --primary: hsl(207, 90%, 54%);
-  --primary-foreground: hsl(211, 100%, 99%);
-  --secondary: hsl(60, 4.8%, 95.9%);
-  --secondary-foreground: hsl(24, 9.8%, 10%);
-  --accent: hsl(60, 4.8%, 95.9%);
-  --accent-foreground: hsl(24, 9.8%, 10%);
+  /* New calm theme colors */
+  --bg: #F5F6F8;
+  --text: #1F1F1F;
+  --subtext: #6F7A8B;
+  --primary-accent: #A3BFFA;
+  --secondary-accent: #DDE6F3;
+  --cta: #4C63B6;
+  --cta-hover: #3B51A2;
+  --border: #E2E8F0;
+
+  /* Shadcn compatible mappings */
+  --background: var(--bg);
+  --foreground: var(--text);
+  --muted: var(--secondary-accent);
+  --muted-foreground: var(--subtext);
+  --popover: var(--bg);
+  --popover-foreground: var(--text);
+  --card: var(--bg);
+  --card-foreground: var(--text);
+  --input: var(--border);
+  --primary: var(--cta);
+  --primary-foreground: #ffffff;
+  --secondary: var(--secondary-accent);
+  --secondary-foreground: var(--text);
+  --accent: var(--primary-accent);
+  --accent-foreground: var(--text);
   --destructive: hsl(0, 84.2%, 60.2%);
   --destructive-foreground: hsl(60, 9.1%, 97.8%);
-  --ring: hsl(20, 14.3%, 4.1%);
+  --ring: var(--primary-accent);
   --radius: 0.5rem;
-  
-  /* Custom cosmic theme colors */
-  --cosmic-navy: hsl(220, 69%, 9%);
-  --cosmic-black: hsl(220, 100%, 3%);
-  --starlight: hsl(210, 40%, 92%);
-  --ethereal-blue: hsl(224, 76%, 48%);
-  --divine-gold: hsl(45, 93%, 47%);
-  --silver-mist: hsl(215, 16%, 75%);
+
+  /* Font variables */
+  --font-headline: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
 }
 
 .dark {
@@ -70,65 +76,72 @@
 }
 
 @layer utilities {
-  .cosmic-bg {
-    background: linear-gradient(135deg, var(--cosmic-navy) 0%, var(--cosmic-black) 100%);
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .cosmic-bg::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: 
-      radial-gradient(2px 2px at 20px 30px, #ffffff, transparent),
-      radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.8), transparent),
-      radial-gradient(1px 1px at 90px 40px, rgba(255,255,255,0.6), transparent),
-      radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.4), transparent),
-      radial-gradient(2px 2px at 160px 30px, rgba(255,255,255,0.9), transparent);
-    background-repeat: repeat;
-    background-size: 200px 100px;
-    opacity: 0.3;
-    animation: twinkle 4s linear infinite;
+  .calm-bg {
+    background-color: var(--bg);
+    min-height: 100vh;
   }
   
   .glass-effect {
     backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid var(--border);
+    border-radius: 12px;
   }
   
   .text-gradient {
-    background: linear-gradient(135deg, var(--starlight) 0%, var(--silver-mist) 100%);
+    background: linear-gradient(135deg, var(--text) 0%, var(--subtext) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   /* Custom color classes */
-  .text-cosmic-navy { color: var(--cosmic-navy); }
-  .text-cosmic-black { color: var(--cosmic-black); }
-  .text-starlight { color: var(--starlight); }
-  .text-ethereal-blue { color: var(--ethereal-blue); }
-  .text-divine-gold { color: var(--divine-gold); }
-  .text-silver-mist { color: var(--silver-mist); }
+  .text-primary { color: var(--text); }
+  .text-subtext { color: var(--subtext); }
+  .text-accent { color: var(--primary-accent); }
+  .text-cta { color: var(--cta); }
   
-  .bg-cosmic-navy { background-color: var(--cosmic-navy); }
-  .bg-cosmic-black { background-color: var(--cosmic-black); }
-  .bg-starlight { background-color: var(--starlight); }
-  .bg-ethereal-blue { background-color: var(--ethereal-blue); }
-  .bg-divine-gold { background-color: var(--divine-gold); }
-  .bg-silver-mist { background-color: var(--silver-mist); }
+  .bg-primary { background-color: var(--bg); }
+  .bg-accent { background-color: var(--primary-accent); }
+  .bg-secondary { background-color: var(--secondary-accent); }
+  .bg-cta { background-color: var(--cta); }
   
-  .border-cosmic-navy { border-color: var(--cosmic-navy); }
-  .border-cosmic-black { border-color: var(--cosmic-black); }
-  .border-starlight { border-color: var(--starlight); }
-  .border-ethereal-blue { border-color: var(--ethereal-blue); }
-  .border-divine-gold { border-color: var(--divine-gold); }
-  .border-silver-mist { border-color: var(--silver-mist); }
+  .border-primary { border-color: var(--border); }
+  .border-accent { border-color: var(--primary-accent); }
+
+  /* Button styles */
+  .btn-primary {
+    background-color: var(--cta);
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: var(--font-body);
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--cta-hover);
+  }
+
+  .btn-outline {
+    background-color: transparent;
+    color: var(--cta);
+    border: 2px solid var(--cta);
+    padding: 12px 26px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: var(--font-body);
+  }
+  
+  .btn-outline:hover {
+    background-color: var(--cta);
+    color: white;
+  }
 }
 
 @keyframes float {
@@ -136,19 +149,14 @@
   50% { transform: translateY(-10px); }
 }
 
-@keyframes twinkle {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 1; }
-}
-
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
 
 .font-serif {
-  font-family: 'EB Garamond', serif;
+  font-family: var(--font-headline);
 }
 
 .font-sans {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-body);
 }
