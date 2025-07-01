@@ -1,14 +1,25 @@
 import { motion } from "framer-motion";
 import heraldLogo from "@assets/herald_1751364333182.png";
+import backgroundImage from "@assets/ChatGPT Image Jul 1, 2025, 11_19_14 AM_1751365160690.png";
 
 export default function Landing() {
 
   return (
-    <div className="calm-bg min-h-screen text-primary">
+    <div 
+      className="min-h-screen text-primary"
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
 
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center">
+        {/* Overlay for text readability */}
+        <div className="absolute inset-0 bg-white bg-opacity-60"></div>
         <div className="max-w-4xl mx-auto px-6 text-center z-10">
           <motion.div
             className="mb-12"
