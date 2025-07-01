@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Herald is a modern full-stack web application featuring a cosmic-themed landing page for a future-facing holding company. The application showcases a clean, elegant design with email signup functionality for interested prospects. Built with React, TypeScript, and Express, it uses a PostgreSQL database with Drizzle ORM for data persistence.
+The Herald is a modern full-stack web application featuring a cosmic-themed landing page for a future-facing holding company. The application showcases a clean, elegant design focused on presenting the company's vision and mission without any signup forms. Built with React, TypeScript, and Express, it emphasizes bold messaging about catalyzing abundance and unconstrained human achievement.
 
 ## System Architecture
 
@@ -40,11 +40,9 @@ The application follows a monorepo structure with clear separation between clien
 ## Data Flow
 
 1. **User Interaction**: Users interact with the cosmic-themed landing page
-2. **Email Signup**: Form submission triggers client-side validation
-3. **API Request**: TanStack Query manages the POST request to `/api/email-signup`
-4. **Server Processing**: Express middleware validates data and checks for duplicates
-5. **Database Storage**: Drizzle ORM persists email signups to PostgreSQL
-6. **Response Handling**: Success/error feedback via toast notifications
+2. **Navigation**: Smooth scrolling navigation between sections (Vision, Focus, Manifesto)
+3. **Content Display**: Static presentation of company vision and focus areas
+4. **No Data Collection**: Landing page is purely informational without forms or data capture
 
 ## External Dependencies
 
@@ -87,7 +85,12 @@ The application follows a monorepo structure with clear separation between clien
 
 ```
 Changelog:
-- July 01, 2025. Initial setup
+- July 01, 2025. Initial setup with email signup functionality
+- July 01, 2025. Updated messaging and removed email signup forms per user request
+  - Changed tagline to "We're catalyzing a world of abundance and unconstrained human achievement"
+  - Added mission statement: "Building the future, one bold venture at a time—across AI, SpaceTech, bio-computing, and next-gen frontiers"
+  - Removed all email capture functionality to create a pure informational landing page
+  - Updated meta descriptions and SEO content to match new messaging
 ```
 
 ## User Preferences
