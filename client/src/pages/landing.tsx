@@ -1,10 +1,6 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
-import { useToast } from "@/hooks/use-toast";
-import { useMutation } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
 import { motion } from "framer-motion";
 import { 
   Brain, 
@@ -18,40 +14,7 @@ import {
   Mail
 } from "lucide-react";
 
-interface EmailSignupData {
-  email: string;
-}
-
 export default function Landing() {
-  const [email, setEmail] = useState("");
-  const { toast } = useToast();
-
-  const emailSignupMutation = useMutation({
-    mutationFn: async (data: EmailSignupData) => {
-      return await apiRequest("POST", "/api/email-signup", data);
-    },
-    onSuccess: () => {
-      toast({
-        title: "Welcome to the future!",
-        description: "You've successfully joined our watchlist.",
-      });
-      setEmail("");
-    },
-    onError: (error: Error) => {
-      toast({
-        title: "Error",
-        description: error.message,
-        variant: "destructive",
-      });
-    },
-  });
-
-  const handleEmailSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email.trim()) return;
-    
-    emailSignupMutation.mutate({ email: email.trim() });
-  };
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -132,7 +95,6 @@ export default function Landing() {
               <a href="#vision" className="text-silver-mist hover:text-starlight transition-colors duration-300">Vision</a>
               <a href="#focus" className="text-silver-mist hover:text-starlight transition-colors duration-300">Focus</a>
               <a href="#manifesto" className="text-silver-mist hover:text-starlight transition-colors duration-300">Manifesto</a>
-              <a href="#contact" className="text-silver-mist hover:text-starlight transition-colors duration-300">Contact</a>
             </div>
           </div>
         </div>
@@ -150,25 +112,27 @@ export default function Landing() {
             Ye are gods.
           </motion.h1>
           <motion.p 
-            className="text-xl md:text-2xl font-light mb-12 text-silver-mist leading-relaxed max-w-3xl mx-auto"
+            className="text-xl md:text-2xl font-light mb-8 text-silver-mist leading-relaxed max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            We're catalyzing a world of abundance, agency, and awe.
+            We're catalyzing a world of abundance and unconstrained human achievement.
+          </motion.p>
+          <motion.p 
+            className="text-lg md:text-xl font-light mb-12 text-silver-mist leading-relaxed max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.4 }}
+          >
+            Building the future, one bold venture at a time—across AI, SpaceTech, bio-computing, and next-gen frontiers.
           </motion.p>
           <motion.div 
             className="space-y-4 md:space-y-0 md:space-x-6 md:flex md:justify-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.4 }}
+            transition={{ duration: 1, delay: 0.6 }}
           >
-            <Button 
-              onClick={() => scrollToSection('contact')}
-              className="bg-divine-gold text-cosmic-black px-8 py-4 rounded-lg font-semibold hover:bg-yellow-500 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-            >
-              Join the Watchlist
-            </Button>
             <Button 
               variant="outline"
               onClick={() => scrollToSection('vision')}
@@ -271,40 +235,7 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* Email Capture Section */}
-      <section id="contact" className="py-24 relative">
-        <div className="max-w-2xl mx-auto px-6 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6 text-gradient">
-            Stay Updated
-          </h2>
-          <p className="text-xl text-silver-mist mb-12">
-            Join our community as we build the future
-          </p>
-          
-          <form onSubmit={handleEmailSubmit} className="space-y-6">
-            <div className="flex flex-col md:flex-row gap-4">
-              <Input 
-                type="email" 
-                placeholder="Enter your email address"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="flex-1 px-6 py-4 bg-cosmic-black border border-starlight border-opacity-30 rounded-lg text-starlight placeholder-silver-mist focus:border-divine-gold focus:outline-none focus:ring-2 focus:ring-divine-gold focus:ring-opacity-50 transition-all duration-300"
-                required
-              />
-              <Button 
-                type="submit"
-                disabled={emailSignupMutation.isPending}
-                className="px-8 py-4 bg-divine-gold text-cosmic-black rounded-lg font-semibold hover:bg-yellow-500 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-              >
-                {emailSignupMutation.isPending ? "Joining..." : "Join Watchlist"}
-              </Button>
-            </div>
-            <p className="text-sm text-silver-mist opacity-70">
-              We respect your privacy. No spam, just future updates.
-            </p>
-          </form>
-        </div>
-      </section>
+
 
       {/* Footer */}
       <footer className="py-16 border-t border-starlight border-opacity-20">
