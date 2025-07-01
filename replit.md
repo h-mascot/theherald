@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Herald is a modern full-stack web application featuring a cosmic-themed landing page for a future-facing holding company. The application showcases a clean, elegant design focused on presenting the company's vision and mission without any signup forms. Built with React, TypeScript, and Express, it emphasizes bold messaging about catalyzing abundance and unconstrained human achievement.
+The Herald is a simple, elegant landing page for a future-facing holding company. The application has been refactored from a complex React structure to a single HTML file with embedded CSS and animations. It showcases a clean, minimal design focused on presenting the company's vision and mission with the core message "Ye are gods". The page features Herald branding with a flowing abstract background and smooth animations.
 
 ## System Architecture
 
