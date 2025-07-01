@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import heraldLogo from "@assets/herald_1751363898930.png";
+import heraldLogo from "@assets/herald_1751364333182.png";
 
 export default function Landing() {
 
