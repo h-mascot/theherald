@@ -1,6 +1,10 @@
 import express, { type Request, Response, NextFunction } from "express";
 import path from "path";
-import { log } from "./vite";
+
+function log(message: string) {
+  const timestamp = new Date().toLocaleTimeString();
+  console.log(`${timestamp} [express] ${message}`);
+}
 
 const app = express();
 app.use(express.json());

@@ -6,14 +6,13 @@ The Herald is a simple, elegant landing page for a future-facing holding company
 
 ## System Architecture
 
-The application follows a monorepo structure with clear separation between client and server code:
+The application has been simplified to a minimal structure:
 
-- **Frontend**: React-based SPA with TypeScript and Vite
-- **Backend**: Express.js REST API with TypeScript
-- **Database**: PostgreSQL with Drizzle ORM
-- **UI Framework**: shadcn/ui components with Tailwind CSS
-- **State Management**: TanStack Query for server state
-- **Routing**: Wouter for client-side routing
+- **Frontend**: Single HTML file with embedded CSS and animations
+- **Backend**: Simple Express.js server serving static HTML and assets
+- **Assets**: Static files served from attached_assets directory
+- **Styling**: Vanilla CSS with Google Fonts (Playfair Display + Inter)
+- **Animations**: Pure CSS animations for smooth interactions
 
 ## Key Components
 
