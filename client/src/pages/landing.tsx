@@ -94,7 +94,6 @@ export default function Landing() {
             <div className="hidden md:flex space-x-8">
               <a href="#vision" className="text-subtext hover:text-primary transition-colors duration-300">Vision</a>
               <a href="#focus" className="text-subtext hover:text-primary transition-colors duration-300">Focus</a>
-              <a href="#manifesto" className="text-subtext hover:text-primary transition-colors duration-300">Manifesto</a>
             </div>
           </div>
         </div>
@@ -127,20 +126,7 @@ export default function Landing() {
           >
             Building the future, one bold venture at a time—across AI, SpaceTech, bio-computing, and next-gen frontiers.
           </motion.p>
-          <motion.div 
-            className="space-y-4 md:space-y-0 md:space-x-6 md:flex md:justify-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.6 }}
-          >
-            <Button 
-              variant="outline"
-              onClick={() => scrollToSection('vision')}
-              className="btn-outline px-8 py-4 rounded-lg font-semibold"
-            >
-              Learn More
-            </Button>
-          </motion.div>
+
         </div>
         
         {/* Floating geometric elements */}
@@ -217,23 +203,7 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* Manifesto Section */}
-      <section id="manifesto" className="py-24 relative">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <Card className="glass-effect rounded-2xl p-12 md:p-16">
-            <blockquote className="font-serif text-3xl md:text-4xl font-light mb-8 text-gradient leading-relaxed">
-              "The future is not something to predict — it's something to proclaim."
-            </blockquote>
-            <cite className="text-subtext text-lg">— The Herald</cite>
-            
-            <div className="mt-16 pt-8 border-t border-primary border-opacity-20">
-              <p className="font-serif text-2xl md:text-3xl font-semibold text-cta">
-                Ye are gods. Act like it.
-              </p>
-            </div>
-          </Card>
-        </div>
-      </section>
+
 
 
 
