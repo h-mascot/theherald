@@ -48,37 +48,37 @@ export default function Landing() {
       icon: Brain,
       title: "Artificial Intelligence",
       description: "Advancing the frontiers of machine cognition and human-AI collaboration",
-      color: "text-divine-gold"
+      color: "text-cta"
     },
     {
       icon: Dna,
       title: "Human Enhancement",
       description: "Unlocking the full potential of human biology and consciousness",
-      color: "text-ethereal-blue"
+      color: "text-accent"
     },
     {
       icon: Rocket,
       title: "Space & Planetary Tech",
       description: "Building infrastructure for humanity's expansion beyond Earth",
-      color: "text-starlight"
+      color: "text-cta"
     },
     {
       icon: Zap,
       title: "Post-Scarcity Systems",
       description: "Creating abundance through revolutionary resource management",
-      color: "text-divine-gold"
+      color: "text-accent"
     },
     {
       icon: Users,
       title: "Sci-Fi Inspired Futures",
       description: "Turning imagination into reality through breakthrough innovation",
-      color: "text-ethereal-blue"
+      color: "text-cta"
     },
     {
       icon: Infinity,
       title: "Beyond Limits",
       description: "Exploring possibilities that transcend current understanding",
-      color: "text-starlight"
+      color: "text-accent"
     }
   ];
 
@@ -173,16 +173,16 @@ export default function Landing() {
               <Card className="glass-effect rounded-2xl p-8 animate-float">
                 <div className="space-y-4">
                   <div className="flex items-center space-x-4">
-                    <div className="w-3 h-3 bg-divine-gold rounded-full"></div>
-                    <span className="text-starlight">Catalyzing Innovation</span>
+                    <div className="w-3 h-3 bg-cta rounded-full"></div>
+                    <span className="text-primary">Catalyzing Innovation</span>
                   </div>
                   <div className="flex items-center space-x-4">
-                    <div className="w-3 h-3 bg-ethereal-blue rounded-full"></div>
-                    <span className="text-starlight">Building the Future</span>
+                    <div className="w-3 h-3 bg-accent rounded-full"></div>
+                    <span className="text-primary">Building the Future</span>
                   </div>
                   <div className="flex items-center space-x-4">
-                    <div className="w-3 h-3 bg-starlight rounded-full"></div>
-                    <span className="text-starlight">Empowering Creators</span>
+                    <div className="w-3 h-3 bg-secondary rounded-full"></div>
+                    <span className="text-primary">Empowering Creators</span>
                   </div>
                 </div>
               </Card>
@@ -198,19 +198,19 @@ export default function Landing() {
             <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-gradient">
               We build and back
             </h2>
-            <p className="text-xl text-silver-mist max-w-2xl mx-auto">
+            <p className="text-xl text-subtext max-w-2xl mx-auto">
               Pioneering technologies that push the boundaries of human potential
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {focusAreas.map((area, index) => (
-              <Card key={index} className="glass-effect rounded-xl p-8 text-center hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105">
+              <Card key={index} className="glass-effect rounded-xl p-8 text-center hover:shadow-lg transition-all duration-300 transform hover:scale-105">
                 <div className={`text-4xl mb-4 ${area.color}`}>
                   <area.icon className="mx-auto w-12 h-12" />
                 </div>
-                <h3 className="font-serif text-xl font-semibold mb-3 text-starlight">{area.title}</h3>
-                <p className="text-silver-mist text-sm">{area.description}</p>
+                <h3 className="font-serif text-xl font-semibold mb-3 text-primary">{area.title}</h3>
+                <p className="text-subtext text-sm">{area.description}</p>
               </Card>
             ))}
           </div>
@@ -224,10 +224,10 @@ export default function Landing() {
             <blockquote className="font-serif text-3xl md:text-4xl font-light mb-8 text-gradient leading-relaxed">
               "The future is not something to predict — it's something to proclaim."
             </blockquote>
-            <cite className="text-silver-mist text-lg">— The Herald</cite>
+            <cite className="text-subtext text-lg">— The Herald</cite>
             
-            <div className="mt-16 pt-8 border-t border-starlight border-opacity-20">
-              <p className="font-serif text-2xl md:text-3xl font-semibold text-divine-gold">
+            <div className="mt-16 pt-8 border-t border-primary border-opacity-20">
+              <p className="font-serif text-2xl md:text-3xl font-semibold text-cta">
                 Ye are gods. Act like it.
               </p>
             </div>
@@ -238,26 +238,26 @@ export default function Landing() {
 
 
       {/* Footer */}
-      <footer className="py-16 border-t border-starlight border-opacity-20">
+      <footer className="py-16 border-t border-primary border-opacity-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
             <div className="text-center md:text-left">
               <div className="font-serif text-2xl font-bold text-gradient mb-2">
                 The Herald
               </div>
-              <p className="text-silver-mist">
+              <p className="text-subtext">
                 © 2025 The Herald • Designed for the next civilization
               </p>
             </div>
             
             <div className="flex space-x-6">
-              <a href="#" className="text-silver-mist hover:text-divine-gold transition-colors duration-300">
+              <a href="#" className="text-subtext hover:text-cta transition-colors duration-300">
                 <Linkedin className="w-6 h-6" />
               </a>
-              <a href="#" className="text-silver-mist hover:text-divine-gold transition-colors duration-300">
+              <a href="#" className="text-subtext hover:text-cta transition-colors duration-300">
                 <Twitter className="w-6 h-6" />
               </a>
-              <a href="#" className="text-silver-mist hover:text-divine-gold transition-colors duration-300">
+              <a href="#" className="text-subtext hover:text-cta transition-colors duration-300">
                 <Mail className="w-6 h-6" />
               </a>
             </div>

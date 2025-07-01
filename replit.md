@@ -91,6 +91,12 @@ Changelog:
   - Added mission statement: "Building the future, one bold venture at a time—across AI, SpaceTech, bio-computing, and next-gen frontiers"
   - Removed all email capture functionality to create a pure informational landing page
   - Updated meta descriptions and SEO content to match new messaging
+- July 01, 2025. Implemented calm aesthetic theme transformation
+  - Updated color scheme from cosmic dark theme to clean, modern calm aesthetic
+  - Changed fonts from EB Garamond to Playfair Display for headlines, Inter for body
+  - Replaced dark background with light (#F5F6F8) and soft accent colors
+  - Updated all component styling to use new theme variables
+  - Modified glass effects and hover states for clean, modern feel
 ```
 
 ## User Preferences
