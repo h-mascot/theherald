@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import heraldLogo from "@assets/herald_1751364333182.png";
+import heraldLogo from "@assets/herald_logo_1751365468489.png";
 import backgroundImage from "@assets/ChatGPT Image Jul 1, 2025, 11_19_14 AM_1751365160690.png";
 
 export default function Landing() {
