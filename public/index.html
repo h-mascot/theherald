@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Herald - Catalyzing Human Achievement</title>
+    <meta name="description" content="We're catalyzing a world of abundance and unconstrained human achievement. Building the future, one bold venture at a time - across AI, SpaceTech, and next-gen frontiers.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --herald-blue: #4C63B6;
+            --text: #1F1F1F;
+            --subtext: #6F7A8B;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+        .hero-section {
+            min-height: 100vh;
+            background-image: url('attached_assets/ChatGPT Image Jul 1, 2025, 11_19_14 AM_1751365160690.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.6);
+        }
+
+        .content {
+            max-width: 64rem;
+            margin: 0 auto;
+            padding: 1.5rem;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo {
+            margin: 0 auto 3rem auto;
+            height: 6rem;
+            width: auto;
+            opacity: 0;
+            transform: scale(0.8);
+            animation: fadeInScale 1s ease-out forwards;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 700;
+            color: var(--herald-blue);
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: 2rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-out 0.2s forwards;
+        }
+
+        .subtitle {
+            font-size: clamp(1.25rem, 3vw, 1.5rem);
+            font-weight: 300;
+            color: var(--subtext);
+            line-height: 1.5;
+            max-width: 48rem;
+            margin: 0 auto 2rem auto;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-out 0.4s forwards;
+        }
+
+        .description {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            font-weight: 300;
+            color: var(--subtext);
+            line-height: 1.6;
+            max-width: 64rem;
+            margin: 0 auto 3rem auto;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-out 0.6s forwards;
+        }
+
+        /* Floating geometric elements */
+        .floating-element {
+            position: absolute;
+            opacity: 0.3;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .element-1 {
+            top: 25%;
+            left: 2.5rem;
+            width: 1rem;
+            height: 1rem;
+            border: 1px solid var(--herald-blue);
+            animation-delay: 1s;
+        }
+
+        .element-2 {
+            top: 75%;
+            right: 5rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            border: 1px solid var(--herald-blue);
+            opacity: 0.4;
+            animation-delay: 2s;
+        }
+
+        .element-3 {
+            bottom: 25%;
+            left: 33%;
+            width: 0.5rem;
+            height: 0.5rem;
+            background: var(--herald-blue);
+            opacity: 0.5;
+            animation-delay: 3s;
+        }
+
+        /* Animations */
+        @keyframes fadeInScale {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .logo {
+                height: 4rem;
+                margin-bottom: 2rem;
+            }
+
+            .content {
+                padding: 1rem;
+            }
+
+            .element-1 {
+                left: 1rem;
+            }
+
+            .element-2 {
+                right: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-section">
+        <div class="overlay"></div>
+        <div class="content">
+            <img src="attached_assets/herald_logo_1751365468489.png" alt="Herald Logo" class="logo">
+
+            <p class="subtitle">We're catalyzing a world of abundance and unconstrained human achievement.</p>
+            <p class="description">Building the future, one bold venture at a time - across AI, SpaceTech, and next-gen frontiers.</p>
+        </div>
+        
+        <!-- Floating geometric elements -->
+        <div class="floating-element element-1"></div>
+        <div class="floating-element element-2"></div>
+        <div class="floating-element element-3"></div>
+    </div>
+</body>
+</html>
